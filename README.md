@@ -54,3 +54,4 @@ export default tseslint.config({
 ```
 # Neos-Website
 # Neos-Landing-Page
+# Neos-Landing-Page
