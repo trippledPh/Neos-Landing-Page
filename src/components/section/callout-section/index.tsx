@@ -1,0 +1,33 @@
+import PrimaryBadge from "@/components/molecules/badge/primary-badge";
+import { Button } from "@/components/ui/button";
+
+const CalloutSection = () => {
+  return (
+    <section
+      className="p-4 "
+      id="callout"
+      style={{
+        background: "url('/image/background/beam-background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="flex justify-center items-center mb-8">
+        <PrimaryBadge label="Sign up for Neos" />
+      </div>
+      <div className="flex flex-col gap-8 mb-14">
+        <h3 className="text-5xl text-center space-x-4">Join Neos today!</h3>
+        <p className="text-lg text-muted-foreground text-center">
+          Stay ahead of the trend with AI-powered bot that analyzes tweets from
+          top crypto influencers in real-time.
+        </p>
+      </div>
+      <div className="flex justify-center items-center mb-24">
+        <Button className="w-fit mx-auto text-xl px-4 py-6">Coming Soon</Button>
+      </div>
+    </section>
+  );
+};
+
+export default CalloutSection;
