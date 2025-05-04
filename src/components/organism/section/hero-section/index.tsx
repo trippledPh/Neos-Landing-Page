@@ -1,5 +1,4 @@
 import PrimaryButton from "@/components/molecules/button/primary-button";
-import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
