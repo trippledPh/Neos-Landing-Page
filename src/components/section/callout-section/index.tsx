@@ -13,9 +13,6 @@ const CalloutSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="flex justify-center items-center mb-8">
-        <PrimaryBadge label="Sign up for Neos" className="mb-12" />
-      </div>
       <div className="flex flex-col gap-8 mb-14">
         <h3 className="text-[40px] leading-[48px] text-center space-x-4 font-maxima-nouva font-bold">
           Join Neos today!
