@@ -14,7 +14,7 @@ const RoadMapSection = () => {
     });
 
   return (
-    <section className="p-4" id="roadmap">
+    <section className="p-4 mb-20" id="roadmap">
       <div className="flex justify-center items-center mb-12">
         <PrimaryBadge label="Coming soon" className="mb-12" />
       </div>
@@ -90,109 +90,6 @@ const RoadMapSection = () => {
                       />
                     ))}
                 </div>
-
-                {/* {isMobile || isSmallMobile ? (
-          <StraightDownDottedLine height={100} />
-        ) : (
-          <div className="mb-[120px]"></div>
-        )}
-
-        <div className="relative">
-          <RoadMapCard
-            indicatorLabel="Q2"
-            title="App Development Advance NLP, & Multi-Channel Notifications"
-            goal="Develop mobile/web app, enchance notifications, and  improve NLP capabilities."
-            milestones={[
-              "Mobile/Web apps in development.",
-              "Advanced NLP features (sentiment analysis, NER).",
-              "Multi-channel notification system (push, email, SMS).",
-            ]}
-            deliverablesLabel="Deliverables for Q2:"
-            deliverables={[
-              "Mobile/Web apps in development.",
-              "Advanced NLP features (sentiment analysis, NER).",
-              "Multi-channel notification system (push, email, SMS).",
-            ]}
-            redirectLink="www.google.com"
-            className={cn(!isMobile && "lg:ml-64")}
-          />
-
-          {isDesktop ||
-            (isLargeDesktop && (
-              <CurveDownDottedLine
-                direction="left"
-                horizontalLength={150}
-                verticalLength={500}
-                verticalOffset={100}
-                className="absolute right-[610px] top-1/4"
-              />
-            ))}
-        </div>
-
-        {isMobile || isSmallMobile ? (
-          <StraightDownDottedLine height={100} />
-        ) : (
-          <div className="mb-[120px]"></div>
-        )}
-
-        <div className="relative">
-          <RoadMapCard
-            indicatorLabel="Q3"
-            title="App Launch, User Onboarding, & Marketing Ramp-up"
-            goal="Launch the app, onboard users, and initiate aggressive marketing."
-            milestones={[
-              "Successful app launch (mobile/web).",
-              "Active user onboarding and referral program.",
-              "CEX listings and exchange promotions.",
-            ]}
-            deliverablesLabel="Deliverables for Q3:"
-            deliverables={[
-              "Successful app launch (mobile/web).",
-              "Active user onboarding and referral program.",
-              "CEX listings and exchange promotions.",
-            ]}
-            redirectLink="www.google.com"
-            className={cn(!isMobile && "lg:mr-64")}
-          />
-
-          {isDesktop ||
-            (isLargeDesktop && (
-              <CurveDownDottedLine
-                direction="right"
-                horizontalLength={150}
-                verticalLength={500}
-                verticalOffset={100}
-                className="absolute right-[100px] top-1/4"
-              />
-            ))}
-        </div>
-
-        {isMobile || isSmallMobile ? (
-          <StraightDownDottedLine height={100} />
-        ) : (
-          <div className="mb-[120px]"></div>
-        )}
-
-        <div className="relative">
-          <RoadMapCard
-            indicatorLabel="Q4"
-            title="Scaling, Advanced Features, & Global Growth"
-            goal="Scale platform, expand globally, and refine features based on user feedback."
-            milestones={[
-              "Scalable platform with global reach.",
-              "Advanced AI features for trend prediction.",
-              "International marketing push and global partnerships.",
-            ]}
-            deliverablesLabel="Deliverables for Q4:"
-            deliverables={[
-              "Scalable platform with global reach.",
-              "Advanced AI features for trend prediction.",
-              "International marketing push and global partnerships.",
-            ]}
-            redirectLink="www.google.com"
-            className={cn(!isMobile && "lg:ml-64")}
-          />
-        </div> */}
               </div>
             );
           })}

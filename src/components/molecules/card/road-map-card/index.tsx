@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import IndicatorBadge from "@/components/ui/indicator-bard";
-import { Share } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { IRoadMapData } from "@/data/roadmap.data";
 
@@ -42,9 +41,9 @@ const RoadMapCard = ({
               <p className="text-muted-foreground text-lg">Goal{goal}</p>
 
               <div>
-                <label className="text-muted-foreground text-lg">
+                <div className="text-muted-foreground text-lg">
                   Key Milestones
-                </label>
+                </div>
                 <div className="list-disc list-inside">
                   {milestones.map((milestone, index) => (
                     <div

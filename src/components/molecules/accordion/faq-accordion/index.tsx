@@ -17,7 +17,7 @@ export function FaqAccordion() {
           id={faq.question}
         >
           <AccordionTrigger
-            className="text-xl font-semibold "
+            className="text-xl font-semibold font-inter text-white"
             id={faq.question}
           >
             {faq.question}
