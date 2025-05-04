@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import NAVIGATION_DATA from "@/data/navigation.data";
+import { toast } from "sonner";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,14 +17,27 @@ const Header = () => {
 
   const handleNavigation = (href: string) => {
     setIsOpen(false);
-    if (href.includes("pdf")) {
+
+    if (href.includes("launchpad")) {
+      toast.info(
+        "Launchpad is Comming Soon, Please stay tuned for more updates"
+      );
+
+      return;
+    }
+
+    if (href.includes("whitepaper")) {
       const link = document.createElement("a");
       link.href = "/files/Neos-Whitepaper.pdf";
       link.download = "Neos-Whitepaper.pdf";
       link.click();
-    } else {
-      window.location.href = href;
+      toast.success("Whitepaper Downloaded");
+
+      return;
     }
+
+    console.log(href);
+    window.location.href = href;
   };
 
   return (

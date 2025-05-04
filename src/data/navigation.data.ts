@@ -20,13 +20,13 @@ const NAVIGATION_DATA = [
   {
     id: 4,
     label: "Whitepaper",
-    href: "/files/whitepaper.pdf",
+    href: "whitepaper",
   },
 
   {
     id: 5,
     label: "Launchpad",
-    href: "/",
+    href: "launchpad",
   },
 ];
 
