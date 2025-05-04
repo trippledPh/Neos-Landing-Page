@@ -10,7 +10,6 @@ interface Props extends IRoadMapData {
 const RoadMapCard = ({
   title,
   goal,
-  milestones,
   deliverables,
   indicatorLabel,
   className,
@@ -40,12 +39,12 @@ const RoadMapCard = ({
             <div className="flex flex-col gap-4">
               <p className="text-muted-foreground text-lg">Goal{goal}</p>
 
-              <div>
+              {/* <div>
                 <div className="text-muted-foreground text-lg">
                   Key Milestones
                 </div>
-                <div className="list-disc list-inside">
-                  {milestones.map((milestone, index) => (
+               {milestones &&  <div className="list-disc list-inside">
+                  {milestones?.map((milestone, index) => (
                     <div
                       className="text-muted-foreground text-lg ml-4"
                       key={milestone.title}
@@ -64,8 +63,8 @@ const RoadMapCard = ({
                       </ul>
                     </div>
                   ))}
-                </div>
-              </div>
+                </div>}
+              </div> */}
 
               <div>
                 <label className="text-muted-foreground text-lg">

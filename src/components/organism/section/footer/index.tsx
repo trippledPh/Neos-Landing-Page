@@ -27,7 +27,7 @@ const FooterSection = () => {
 
           <div className="flex gap-4">
             {SOCIALS_DATA.map((social) => (
-              <Link to={social.url} key={social.id}>
+              <Link to={social.url} key={social.id} target="_blank">
                 <div className="p-4 rounded-md bg-[#181818] text-white">
                   <img
                     src={social.icon}

@@ -1,8 +1,11 @@
 import PrimaryBadge from "@/components/molecules/badge/primary-badge";
 import ArticleCard from "@/components/molecules/card/article-card";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { APP_CONFIG } from "@/config/app.config";
 import useScreenBreakpoint from "@/hook/use-screen-breakpoint";
+import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ArticleSection = () => {
   const { isLargeDesktop } = useScreenBreakpoint();
@@ -23,10 +26,13 @@ const ArticleSection = () => {
               detection accuracy.
             </p>
           )}
-          <Button
-            variant="link"
-            className="flex-start text-2xl text-start justify-start  p-0"
-            size="lg"
+          <Link
+            to={APP_CONFIG.env.GITBOOK_URL}
+            className={cn(
+              buttonVariants({ variant: "link", size: "lg" }),
+              "flex-start text-2xl text-start justify-start  p-0"
+            )}
+            target="_blank"
           >
             <span className="bg-gradient-to-r from-primary-foreground to-primary bg-clip-text text-transparent">
               Read documentation
@@ -34,7 +40,7 @@ const ArticleSection = () => {
             <span className="ml-4">
               <ArrowRight size={48} className="size-[24px]" />
             </span>
-          </Button>
+          </Link>
         </div>
 
         {isLargeDesktop && (

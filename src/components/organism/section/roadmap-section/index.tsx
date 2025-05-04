@@ -80,7 +80,7 @@ const RoadMapSection = () => {
                       <CurveDownDottedLine
                         direction={isEven ? "right" : "left"}
                         horizontalLength={150}
-                        verticalLength={900}
+                        verticalLength={500}
                         verticalOffset={100}
                         className={cn(
                           "absolute right-[100px] top-1/2",

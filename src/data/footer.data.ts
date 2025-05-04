@@ -1,3 +1,5 @@
+import { APP_CONFIG } from "@/config/app.config";
+
 export const FOOTER_DATA_LEFT_SIDE = [
   {
     id: 1,
@@ -27,7 +29,7 @@ export const FOOTER_DATA_RIGHT_SIDE = [
   {
     id: 1,
     name: "Documentation",
-    url: "#documentation",
+    url: APP_CONFIG.env.GITBOOK_URL,
   },
 
   {

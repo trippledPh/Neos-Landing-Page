@@ -1,3 +1,5 @@
+import { APP_CONFIG } from "@/config/app.config";
+
 const NAVIGATION_DATA = [
   {
     id: 1,
@@ -15,10 +17,18 @@ const NAVIGATION_DATA = [
     label: "Roadmap",
     href: "#roadmap",
   },
+
   {
     id: 4,
-    label: "How it works",
-    href: "#faq",
+    label: "Whitepaper",
+    href: APP_CONFIG.env.GITBOOK_URL,
+    target: "_blank",
+  },
+
+  {
+    id: 5,
+    label: "Launchpad",
+    href: "/",
   },
 ];
 

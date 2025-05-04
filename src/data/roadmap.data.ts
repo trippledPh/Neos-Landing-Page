@@ -10,7 +10,7 @@ export interface IRoadMapData {
   title: string;
   goal: string;
   deliverables: string[];
-  milestones: MileStone[];
+  milestones?: MileStone[];
 }
 
 export const ROADMAP_DATA: IRoadMapData[] = [
