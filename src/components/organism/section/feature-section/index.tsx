@@ -2,7 +2,7 @@ import PrimaryBadge from "@/components/molecules/badge/primary-badge";
 import FeatureCard from "@/components/molecules/card/feature-card";
 const FeatureSection = () => {
   return (
-    <section className="p-4 mb-20" id="features">
+    <section className="p-4 mb-20 lg:mb-40" id="features">
       <div className="flex justify-center items-center mb-12">
         <PrimaryBadge label="Key Features" />
       </div>

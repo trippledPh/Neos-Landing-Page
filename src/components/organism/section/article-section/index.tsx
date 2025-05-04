@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const ArticleSection = () => {
   const { isLargeDesktop } = useScreenBreakpoint();
   return (
-    <section className="p-4 mb-20">
+    <section className="p-4 mb-20 lg:mb-40">
       <PrimaryBadge label="How it work" className="mb-12" />
       <div className="lg:flex lg:flex-row lg:justify-between lg:items-center mb-20">
         <div className="flex flex-col gap-4 lg:w-[700px] ">

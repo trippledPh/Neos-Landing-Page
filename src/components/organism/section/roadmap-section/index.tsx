@@ -14,7 +14,7 @@ const RoadMapSection = () => {
     });
 
   return (
-    <section className="p-4 mb-20" id="roadmap">
+    <section className="p-4 mb-20 lg:mb-40" id="roadmap">
       <div className="flex justify-center items-center mb-12">
         <PrimaryBadge label="Coming soon" className="mb-12" />
       </div>

@@ -8,6 +8,7 @@ import HeroSection from "../../organism/section/hero-section";
 import RoadMapSection from "../../organism/section/roadmap-section";
 import SponsorSection from "../../organism/section/sponsor-section";
 import TokenomicsSection from "../../organism/section/tokenomics-section";
+import LaunchpadSection from "@/components/organism/section/launchpad-section";
 
 const LandingPage = () => {
   return (
@@ -29,6 +30,7 @@ const LandingPage = () => {
       <FeatureSection />
       <TokenomicsSection />
       <RoadMapSection />
+      <LaunchpadSection />
       <FrequentlyAskSection />
       <CalloutSection />
       <FooterSection />
