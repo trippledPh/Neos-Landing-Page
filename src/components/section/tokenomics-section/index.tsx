@@ -68,7 +68,7 @@ const TokenomicsSection = () => {
           <div>
             <h3 className="mb-4">
               <span className="text-[40px] leading-[48px] font-maxima-nouva font-bold">
-                1,000,000 Supply
+                10,000,000 Supply
               </span>
             </h3>
             {!isLargeDesktop && (
