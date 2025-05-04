@@ -14,6 +14,11 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleNavigation = (href: string) => {
+    setIsOpen(false);
+    window.location.href = href;
+  };
+
   return (
     <>
       <header className="flex items-center justify-between p-4 border-b border-gray-300/20">
@@ -22,7 +27,12 @@ const Header = () => {
         <ul className="hidden md:flex md:items-center md:gap-4 text-lg text-muted-foreground lg:gap-12">
           {NAVIGATION_DATA.map((item) => (
             <li key={item.id}>
-              <a href={item.href}>{item.label}</a>
+              <button
+                onClick={() => handleNavigation(item.href)}
+                className="cursor-pointer"
+              >
+                {item.label}
+              </button>
             </li>
           ))}
         </ul>
@@ -51,7 +61,12 @@ const Header = () => {
             <ul className="text-2xl flex flex-col gap-4 justify-start items-start mt-8 text-muted-foreground">
               {NAVIGATION_DATA.map((item) => (
                 <li key={item.label}>
-                  <a href={item.href}>{item.label}</a>
+                  <button
+                    onClick={() => handleNavigation(item.href)}
+                    className="cursor-pointer"
+                  >
+                    {item.label}
+                  </button>
                 </li>
               ))}
             </ul>
