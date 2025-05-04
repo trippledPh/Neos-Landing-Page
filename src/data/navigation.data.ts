@@ -1,4 +1,3 @@
-import { APP_CONFIG } from "@/config/app.config";
 
 const NAVIGATION_DATA = [
   {
@@ -21,8 +20,7 @@ const NAVIGATION_DATA = [
   {
     id: 4,
     label: "Whitepaper",
-    href: APP_CONFIG.env.GITBOOK_URL,
-    target: "_blank",
+    href: "/files/whitepaper.pdf",
   },
 
   {

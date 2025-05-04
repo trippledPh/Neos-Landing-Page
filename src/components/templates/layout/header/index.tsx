@@ -16,7 +16,14 @@ const Header = () => {
 
   const handleNavigation = (href: string) => {
     setIsOpen(false);
-    window.location.href = href;
+    if (href.includes("pdf")) {
+      const link = document.createElement("a");
+      link.href = "/files/Neos-Whitepaper.pdf";
+      link.download = "Neos-Whitepaper.pdf";
+      link.click();
+    } else {
+      window.location.href = href;
+    }
   };
 
   return (
