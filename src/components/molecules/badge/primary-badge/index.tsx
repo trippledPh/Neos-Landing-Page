@@ -8,7 +8,12 @@ interface Props {
 
 const PrimaryBadge = ({ label, hasBullet = true, className }: Props) => {
   return (
-    <Badge className={cn("bg-[#1C1B1B] space-x-2 px-6 py-2", className)}>
+    <Badge
+      className={cn(
+        "bg-[#1C1B1B] space-x-2 px-6 py-2 font-maxima-nouva",
+        className
+      )}
+    >
       {hasBullet && (
         <span className="w-2 h-2 bg-primary-foreground rounded-full"></span>
       )}

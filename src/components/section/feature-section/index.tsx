@@ -2,17 +2,17 @@ import PrimaryBadge from "@/components/molecules/badge/primary-badge";
 import FeatureCard from "@/components/molecules/card/feature-card";
 const FeatureSection = () => {
   return (
-    <section className="p-4  mb-[100px] lg:mb-[200px]" id="features">
-      <div className="flex justify-center items-center mb-18">
+    <section className="p-4 mb-20" id="features">
+      <div className="flex justify-center items-center mb-12">
         <PrimaryBadge label="Key Features" />
       </div>
-      <div className="flex flex-col gap-8 mb-14  lg:justify-center lg:items-center">
-        <h3 className="text-5xl text-center space-x-4 lg:text-6xl lg:leading-tight lg:flex lg:flex-row lg:gap-0 lg:w-[800px] lg:text-wrap lg:flex-wrap lg:justify-center lg:items-center">
+      <div className="flex flex-col gap-8 mb-20  lg:justify-center lg:items-center">
+        <h3 className="text-[40px] leading-[48px] text-center space-x-4 lg:text-6xl lg:leading-tight lg:flex lg:flex-row lg:gap-0 lg:w-[800px] lg:text-wrap lg:flex-wrap lg:justify-center lg:items-center font-maxima-nouva font-thin">
           <span>Stay</span>
           <span className="font-bold">ahead of the trend</span>
           <span>with Neos</span>
         </h3>
-        <p className="text-lg text-muted-foreground text-center lg:w-[600px]">
+        <p className="text-base text-muted-foreground text-center lg:w-[600px]">
           Monitor top crypto influencers in real time and discover emerging
           trends and market narratives before they take off.
         </p>
