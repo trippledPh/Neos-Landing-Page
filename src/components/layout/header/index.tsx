@@ -8,7 +8,7 @@ import NAVIGATION_DATA from "@/data/navigation.data";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { isMobile } = useScreenBreakpoint();
+  const { isMobile, isSmallMobile } = useScreenBreakpoint();
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -27,7 +27,7 @@ const Header = () => {
           ))}
         </ul>
 
-        {isMobile ? (
+        {isMobile || isSmallMobile ? (
           <Button size="icon" variant="ghost" onClick={handleOpen}>
             <Menu style={{ width: "32px", height: "32px" }} />
           </Button>

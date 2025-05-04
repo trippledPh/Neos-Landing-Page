@@ -1,13 +1,14 @@
 import { Badge } from "@/components/ui/badge";
-
+import { cn } from "@/lib/utils";
 interface Props {
   label: string;
   hasBullet?: boolean;
+  className?: string;
 }
 
-const PrimaryBadge = ({ label, hasBullet = true }: Props) => {
+const PrimaryBadge = ({ label, hasBullet = true, className }: Props) => {
   return (
-    <Badge className="bg-[#1C1B1B] space-x-2 px-6 py-2">
+    <Badge className={cn("bg-[#1C1B1B] space-x-2 px-6 py-2", className)}>
       {hasBullet && (
         <span className="w-2 h-2 bg-primary-foreground rounded-full"></span>
       )}
