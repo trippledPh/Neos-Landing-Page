@@ -1,4 +1,3 @@
-import PrimaryBadge from "@/components/molecules/badge/primary-badge";
 import { Button } from "@/components/ui/button";
 
 const CalloutSection = () => {
