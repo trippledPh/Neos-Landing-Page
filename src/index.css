@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import "./assets/css/font.inter.css";
+@import "./assets/css/font.maxima-nouva.css";
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -46,7 +49,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(17.3% 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -86,6 +89,9 @@
 }
 
 @theme inline {
+  --font-maxima-nouva: "MaximaNouva", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -130,4 +136,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+  font-family: "Inter", sans-serif;
 }

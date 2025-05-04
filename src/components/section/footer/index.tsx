@@ -11,16 +11,16 @@ const FooterSection = () => {
       className="p-4 relative lg:flex lg:flex-row lg:justify-between lg:items-center"
       id="footer"
     >
-      <div className="flex flex-col gap-4 ">
-        <div className="flex items-center gap-4">
+      <div className="flex flex-col mb-16">
+        <div className="flex items-center">
           <img
             src="/image/logos/neos-footer-logo-black.png"
             alt="Neos Logo"
             className="object-fit  h-[84px]"
           />
         </div>
-        <div className="px-4 flex flex-col gap-6">
-          <p className="text-muted-foreground lg:max-w-[400px]">
+        <div className="pl-2 flex flex-col ">
+          <p className="text-muted-foreground lg:max-w-[400px] mb-8">
             Stay ahead of the trend with AI-powered bot that analyzes tweets
             from top crypto influencers in real-time.
           </p>
@@ -48,9 +48,9 @@ const FooterSection = () => {
         <ul className="flex flex-col gap-2 text-muted-foreground">
           {FOOTER_DATA_LEFT_SIDE.map((item) => (
             <li key={item.id}>
-              <Link to={item.url} className="text-xl">
+              <a href={item.url} className="text-xl">
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -58,9 +58,9 @@ const FooterSection = () => {
         <ul className="flex flex-col gap-2 text-muted-foreground">
           {FOOTER_DATA_RIGHT_SIDE.map((item) => (
             <li key={item.id}>
-              <Link to={item.url} className="text-lg">
+              <a href={item.url} className="text-lg">
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

@@ -16,7 +16,7 @@ const App = () => {
       <div className="overflow-x-hidden mx-auto max-w-[1440px]">
         <Header />
         <div
-          className="relative min-h-[calc(100vh-74px)]  flex justify-center items-center flex-col gap-8 mb-[200px]"
+          className="relative min-h-[calc(100vh-82px)]  flex justify-center items-center flex-col gap-8 mb-[80px]"
           style={{
             background: "url('/image/background/beam-background.png')",
             backgroundSize: "cover",

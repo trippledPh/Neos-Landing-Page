@@ -14,10 +14,12 @@ const CalloutSection = () => {
       }}
     >
       <div className="flex justify-center items-center mb-8">
-        <PrimaryBadge label="Sign up for Neos" />
+        <PrimaryBadge label="Sign up for Neos" className="mb-12" />
       </div>
       <div className="flex flex-col gap-8 mb-14">
-        <h3 className="text-5xl text-center space-x-4">Join Neos today!</h3>
+        <h3 className="text-[40px] leading-[48px] text-center space-x-4 font-maxima-nouva font-bold">
+          Join Neos today!
+        </h3>
         <p className="text-lg text-muted-foreground text-center">
           Stay ahead of the trend with AI-powered bot that analyzes tweets from
           top crypto influencers in real-time.

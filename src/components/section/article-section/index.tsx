@@ -7,17 +7,17 @@ import { ArrowRight } from "lucide-react";
 const ArticleSection = () => {
   const { isLargeDesktop } = useScreenBreakpoint();
   return (
-    <section className="p-4 mb-[100px] lg:mb-[200px]">
-      <PrimaryBadge label="How it work" />
-      <div className="lg:flex lg:flex-row lg:justify-between lg:items-center">
-        <div className="flex flex-col gap-4 my-12 lg:w-[700px] ">
-          <h3 className="text-5xl flex flex-wrap gap-4 md:text-6xl wrap-break-word lg:mb-4">
+    <section className="p-4 mb-20">
+      <PrimaryBadge label="How it work" className="mb-12" />
+      <div className="lg:flex lg:flex-row lg:justify-between lg:items-center mb-20">
+        <div className="flex flex-col gap-4 lg:w-[700px] ">
+          <h3 className="text-5xl leading-[38px] md:text-6xl flex flex-wrap gap-4 wrap-break-word lg:mb-4 font-maxima-nouva font-thin mb-6">
             <span>Leveraging</span>
             <span className="font-bold">advaced NLP</span>
             <span>techniques.</span>
           </h3>
           {!isLargeDesktop && (
-            <p className="text-lg text-muted-foreground mb-4">
+            <p className="text-lg text-muted-foreground mb-12">
               Neos continuously refines its AI models through retraining,
               performance monitoring, and feedback loops to enhance narrative
               detection accuracy.

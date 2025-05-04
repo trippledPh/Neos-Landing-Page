@@ -61,16 +61,18 @@ const TokenomicsSection = () => {
   }, [isLargeDesktop]);
 
   return (
-    <section className="my-18 mb-[100px] lg:mb-[200px] p-4" id="tokenomics">
+    <section className="mb-20 p-4" id="tokenomics">
       <div>
-        <PrimaryBadge label="Tokenomics" />
+        <PrimaryBadge label="Tokenomics" className="mb-12" />
         <div className="mb-12 lg:flex lg:justify-between lg:items-center lg:mb-0">
           <div>
-            <h3 className="mb-10 mt-8">
-              <span className="text-5xl font-semibold">1,000,000 Supply</span>
+            <h3 className="mb-4">
+              <span className="text-[40px] leading-[48px] font-maxima-nouva font-bold">
+                10,000,000 Supply
+              </span>
             </h3>
             {!isLargeDesktop && (
-              <p className="text-muted-foreground text-lg md:w-[400px]">
+              <p className="text-muted-foreground text-base md:w-[400px]">
                 A transparent and sustainable tokenomics model designed to drive
                 long-term growth and ecosystem stability.
               </p>
@@ -78,7 +80,7 @@ const TokenomicsSection = () => {
           </div>
 
           {isLargeDesktop && (
-            <p className="text-muted-foreground text-lg md:w-[600px] text-end">
+            <p className="text-muted-foreground text-base md:w-[600px] text-end">
               A transparent and sustainable tokenomics model designed to drive
               long-term growth and ecosystem stability.
             </p>
@@ -88,7 +90,7 @@ const TokenomicsSection = () => {
 
       <div>
         <div className="flex flex-col gap-4 overflow-hidden md:mb-8">
-          <button className="flex items-center gap-4 text-2xl bg-gradient-to-r from-primary-foreground to-primary bg-clip-text text-transparent mb-12">
+          <button className="font-maxima-nouva font-bold flex items-center gap-4 text-2xl bg-gradient-to-r from-primary-foreground to-primary bg-clip-text text-transparent mb-12">
             See roadmap
             <ArrowDown className="text-primary" />
           </button>

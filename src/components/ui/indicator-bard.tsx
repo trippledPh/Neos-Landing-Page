@@ -5,7 +5,7 @@ export interface IndicatorBadgeProps {
 
 const IndicatorBadge = ({ number, title }: IndicatorBadgeProps) => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 font-maxima-nouva font-bold">
       <span className="rounded-full font-semibold bg-primary text-black w-10 h-10 flex items-center justify-center bg-gradient-to-b from-[#ff2300] to-primary">
         <span className="text-lg font-semibold">{number}</span>
       </span>
