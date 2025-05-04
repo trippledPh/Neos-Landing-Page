@@ -67,7 +67,7 @@ const ArticleSection = () => {
             number="03"
             title="Notification System"
             thumbnail="/image/article/article-3.svg"
-            description="Neos instantly alerts users via email, SMS, or push notifications when crypto narratives are detected."
+            description="Neos instantly alerts users via our bot and gives a notification when crypto narratives are detected."
           />
         </div>
       </div>
