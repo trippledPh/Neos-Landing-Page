@@ -3,6 +3,7 @@ import RoadMapCard from "@/components/molecules/card/road-map-card";
 import CurveDownDottedLine from "@/components/molecules/lines/curve-down-dotted";
 import StraightDownDottedLine from "@/components/molecules/lines/straight-down-dotted";
 import Logo from "@/components/ui/logo";
+import { ROADMAP_DATA } from "@/data/roadmap.data";
 import useScreenBreakpoint from "@/hook/use-screen-breakpoint";
 import { cn } from "@/lib/utils";
 
@@ -13,17 +14,17 @@ const RoadMapSection = () => {
     });
 
   return (
-    <section className="my-18 p-4 mb-[200px]" id="roadmap">
+    <section className="p-4" id="roadmap">
       <div className="flex justify-center items-center mb-12">
-        <PrimaryBadge label="Coming soon" />
+        <PrimaryBadge label="Coming soon" className="mb-12" />
       </div>
-      <div className="mb-12">
-        <h3 className="mb-10 mt-8 text-center">
-          <span className="text-5xl font-semibold text-center">
+      <div className="mb-14">
+        <h3 className="mb-6 text-center">
+          <span className="text-[40px] leading-[48px] font-maxima-nouva font-bold">
             Roadmap of Neos
           </span>
         </h3>
-        <p className="text-muted-foreground text-lg text-center">
+        <p className="text-muted-foreground text-base text-center">
           AI-powered bot that analyzes tweets from top crypto influencers in
           real-time to identify emerging trends and narratives.
         </p>
@@ -44,40 +45,53 @@ const RoadMapSection = () => {
             ))}
         </div>
 
-        {isMobile || isSmallMobile ? (
-          <StraightDownDottedLine height={100} />
-        ) : (
-          <div className="mb-[120px]"></div>
-        )}
+        <div>
+          {ROADMAP_DATA.map((roadmap, index) => {
+            const isLast = index === ROADMAP_DATA.length - 1;
+            const isFirst = index === 0;
+            const isEven = index % 2 === 0;
+            const isOdd = index % 2 !== 0;
 
-        <div className="relative">
-          <RoadMapCard
-            indicatorLabel="Q1"
-            title="Core Development and Telegram Bot Lauch"
-            goal="Goal: Establish infrastructure, develop Telegram bot, and finalize app UI."
-            deliverablesLabel="Deliverables for Q1:"
-            deliverables={[
-              "Infrastructure for data collection.",
-              "Active Telegram bot with notifications.",
-              "Finalized app UI design.",
-            ]}
-            redirectLink="www.google.com"
-            className={cn(!isMobile && "lg:mr-64")}
-          />
+            const isEvenCardMargin = isEven && !isLast ? "mr-64" : "";
+            const isOddCardMargin = isOdd && !isFirst ? "ml-64" : "";
 
-          {isDesktop ||
-            (isLargeDesktop && (
-              <CurveDownDottedLine
-                direction="right"
-                horizontalLength={150}
-                verticalLength={500}
-                verticalOffset={100}
-                className="absolute right-[100px] top-1/4"
-              />
-            ))}
-        </div>
+            const isEvenCurveMargin = isEven && !isLast ? "right-[100px]" : "";
+            const isOddCurveMargin = isOdd && !isFirst ? "left-[100px]" : "";
 
-        {isMobile || isSmallMobile ? (
+            return (
+              <div key={roadmap.id}>
+                {isMobile || isSmallMobile ? (
+                  <StraightDownDottedLine height={100} />
+                ) : (
+                  <div className="mb-[120px]"></div>
+                )}
+
+                <div className="relative">
+                  <RoadMapCard
+                    {...roadmap}
+                    className={cn(
+                      (isDesktop || isLargeDesktop) && isEvenCardMargin,
+                      (isDesktop || isLargeDesktop) && isOddCardMargin
+                    )}
+                  />
+
+                  {isDesktop ||
+                    (isLargeDesktop && !isLast && (
+                      <CurveDownDottedLine
+                        direction={isEven ? "right" : "left"}
+                        horizontalLength={150}
+                        verticalLength={900}
+                        verticalOffset={100}
+                        className={cn(
+                          "absolute right-[100px] top-1/2",
+                          isEvenCurveMargin,
+                          isOddCurveMargin
+                        )}
+                      />
+                    ))}
+                </div>
+
+                {/* {isMobile || isSmallMobile ? (
           <StraightDownDottedLine height={100} />
         ) : (
           <div className="mb-[120px]"></div>
@@ -87,7 +101,12 @@ const RoadMapSection = () => {
           <RoadMapCard
             indicatorLabel="Q2"
             title="App Development Advance NLP, & Multi-Channel Notifications"
-            goal="Goal: Develop mobile/web app, enchance notifications, and  improve NLP capabilities."
+            goal="Develop mobile/web app, enchance notifications, and  improve NLP capabilities."
+            milestones={[
+              "Mobile/Web apps in development.",
+              "Advanced NLP features (sentiment analysis, NER).",
+              "Multi-channel notification system (push, email, SMS).",
+            ]}
             deliverablesLabel="Deliverables for Q2:"
             deliverables={[
               "Mobile/Web apps in development.",
@@ -120,7 +139,12 @@ const RoadMapSection = () => {
           <RoadMapCard
             indicatorLabel="Q3"
             title="App Launch, User Onboarding, & Marketing Ramp-up"
-            goal="Goal: Launch the app, onboard users, and initiate aggressive marketing."
+            goal="Launch the app, onboard users, and initiate aggressive marketing."
+            milestones={[
+              "Successful app launch (mobile/web).",
+              "Active user onboarding and referral program.",
+              "CEX listings and exchange promotions.",
+            ]}
             deliverablesLabel="Deliverables for Q3:"
             deliverables={[
               "Successful app launch (mobile/web).",
@@ -153,7 +177,12 @@ const RoadMapSection = () => {
           <RoadMapCard
             indicatorLabel="Q4"
             title="Scaling, Advanced Features, & Global Growth"
-            goal="Goal: Scale platform, expand globally, and refine features based on user feedback."
+            goal="Scale platform, expand globally, and refine features based on user feedback."
+            milestones={[
+              "Scalable platform with global reach.",
+              "Advanced AI features for trend prediction.",
+              "International marketing push and global partnerships.",
+            ]}
             deliverablesLabel="Deliverables for Q4:"
             deliverables={[
               "Scalable platform with global reach.",
@@ -163,6 +192,10 @@ const RoadMapSection = () => {
             redirectLink="www.google.com"
             className={cn(!isMobile && "lg:ml-64")}
           />
+        </div> */}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
