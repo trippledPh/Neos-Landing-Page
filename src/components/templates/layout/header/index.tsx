@@ -21,21 +21,25 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex items-center justify-between p-4 border-b border-gray-300/20">
-        <Logo size={48} />
+      <header className="flex items-center justify-between lg:gap-4 p-4 border-b border-gray-300/20">
+        <div className="flex gap-4 w-full justify-between items-center lg:justify-start lg:gap-12">
+          <Logo size={48} />
 
-        <ul className="hidden md:flex md:items-center md:gap-4 text-lg text-muted-foreground lg:gap-12">
-          {NAVIGATION_DATA.map((item) => (
-            <li key={item.id}>
-              <button
-                onClick={() => handleNavigation(item.href)}
-                className="cursor-pointer"
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
-        </ul>
+          <ul className="hidden md:flex md:items-center md:gap-4 text-lg text-muted-foreground lg:gap-12">
+            {NAVIGATION_DATA.map((item) => (
+              <li key={item.id}>
+                <button
+                  className="hover:text-primary hover:underline transition-all duration-200 cursor-pointer"
+                  onClick={() => handleNavigation(item.href)}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          <span></span>
+        </div>
 
         {isMobile || isSmallMobile ? (
           <Button size="icon" variant="ghost" onClick={handleOpen}>

@@ -1,6 +1,6 @@
 import PrimaryBadge from "@/components/molecules/badge/primary-badge";
 import ArticleCard from "@/components/molecules/card/article-card";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { APP_CONFIG } from "@/config/app.config";
 import useScreenBreakpoint from "@/hook/use-screen-breakpoint";
 import { cn } from "@/lib/utils";
