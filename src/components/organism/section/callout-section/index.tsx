@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import PrimaryButton from "@/components/molecules/button/primary-button";
 
 const CalloutSection = () => {
   return (
@@ -22,7 +22,7 @@ const CalloutSection = () => {
         </p>
       </div>
       <div className="flex justify-center items-center mb-24">
-        <Button className="w-fit mx-auto text-xl px-4 py-6">Coming Soon</Button>
+        <PrimaryButton>Coming Soon</PrimaryButton>
       </div>
     </section>
   );

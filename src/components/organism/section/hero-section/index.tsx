@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import PrimaryButton from "@/components/molecules/button/primary-button";
 
 const HeroSection = () => {
   return (
@@ -14,9 +14,7 @@ const HeroSection = () => {
         AI-powered bot that analyzes tweets from top crypto influencers in
         real-time to identify emerging trends and narratives.
       </p>
-      <Button variant="default" className="w-fit text-xl py-6 px-6">
-        Coming Soon
-      </Button>
+      <PrimaryButton>Coming Soon</PrimaryButton>
     </section>
   );
 };

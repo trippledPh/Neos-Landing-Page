@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const FrequentlyAskSection = () => {
   return (
-    <section className="p-4 mb-20" id="faq">
+    <section className="p-4 mb-20 lg:mb-40" id="faq">
       <PrimaryBadge label="Frequently Asked Questions" className="mb-12" />
       <div className="lg:grid lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col gap-4 mb-16">
@@ -14,6 +14,7 @@ const FrequentlyAskSection = () => {
           <p className="text-lg text-muted-foreground mb-4">
             Can't find what you're looking for?
           </p>
+
           <Button size="lg" className="w-fit bg-[#1f1f1f]  py-6 px-4">
             <span className="text-xl text-white">Contact us</span>
           </Button>
