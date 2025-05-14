@@ -11,12 +11,12 @@ const ArticleSection = () => {
   const { isLargeDesktop } = useScreenBreakpoint();
   return (
     <section className="p-4 mb-20 lg:mb-40">
-      <PrimaryBadge label="How it work" className="mb-12" />
+      <PrimaryBadge label="How it works" className="mb-12" />
       <div className="lg:flex lg:flex-row lg:justify-between lg:items-center mb-20">
         <div className="flex flex-col gap-4 lg:w-[700px] ">
           <h3 className="text-5xl leading-[38px] md:text-6xl flex flex-wrap gap-4 wrap-break-word lg:mb-4 font-maxima-nouva font-thin mb-6">
             <span>Leveraging</span>
-            <span className="font-bold">advaced NLP</span>
+            <span className="font-bold">advanced NLP</span>
             <span>techniques.</span>
           </h3>
           {!isLargeDesktop && (
