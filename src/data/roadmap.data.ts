@@ -17,7 +17,7 @@ export const ROADMAP_DATA: IRoadMapData[] = [
   {
     id: 1,
     indicatorLabel: "Q1",
-    title: "Core Development and Telegram Bot Lauch",
+    title: "Core Development and Telegram Bot Launch",
     goal: "Establish foundational infrastructure, develop the Telegram bot, and finalize the app UI.",
     milestones: [
       {
