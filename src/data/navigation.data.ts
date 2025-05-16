@@ -1,4 +1,3 @@
-
 const NAVIGATION_DATA = [
   {
     id: 1,
@@ -26,7 +25,7 @@ const NAVIGATION_DATA = [
   {
     id: 5,
     label: "Launchpad",
-    href: "launchpad",
+    href: "/launchpad",
   },
 ];
 

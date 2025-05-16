@@ -1,4 +1,10 @@
-export const FAQ_DATA = [
+export interface IFrequentlyAskData {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export const FAQ_DATA: IFrequentlyAskData[] = [
   {
     id: 1,
     question: "What is Neos?",

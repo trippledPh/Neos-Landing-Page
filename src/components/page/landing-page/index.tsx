@@ -9,6 +9,7 @@ import RoadMapSection from "../../organism/section/roadmap-section";
 import SponsorSection from "../../organism/section/sponsor-section";
 import TokenomicsSection from "../../organism/section/tokenomics-section";
 import LaunchpadSection from "@/components/organism/section/launchpad-section";
+import { FAQ_DATA } from "@/data/faq.data";
 
 const LandingPage = () => {
   return (
@@ -31,7 +32,7 @@ const LandingPage = () => {
       <TokenomicsSection />
       <RoadMapSection />
       <LaunchpadSection />
-      <FrequentlyAskSection />
+      <FrequentlyAskSection faqData={FAQ_DATA} />
       <CalloutSection />
       <FooterSection />
     </div>

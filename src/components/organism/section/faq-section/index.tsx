@@ -1,8 +1,13 @@
 import FaqAccordion from "@/components/molecules/accordion/faq-accordion";
 import PrimaryBadge from "@/components/molecules/badge/primary-badge";
 import { Button } from "@/components/ui/button";
+import { IFrequentlyAskData } from "@/data/faq.data";
 
-const FrequentlyAskSection = () => {
+interface Props {
+  faqData: IFrequentlyAskData[];
+}
+
+const FrequentlyAskSection = ({ faqData }: Props) => {
   return (
     <section className="p-4 mb-20 lg:mb-40" id="faq">
       <PrimaryBadge label="Frequently Asked Questions" className="mb-12" />
@@ -21,7 +26,7 @@ const FrequentlyAskSection = () => {
         </div>
 
         <div>
-          <FaqAccordion />
+          <FaqAccordion faqData={faqData} />
         </div>
       </div>
     </section>

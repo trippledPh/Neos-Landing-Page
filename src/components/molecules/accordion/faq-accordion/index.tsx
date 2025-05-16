@@ -4,12 +4,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { FAQ_DATA } from "@/data/faq.data";
+import { FAQ_DATA, IFrequentlyAskData } from "@/data/faq.data";
 
-export function FaqAccordion() {
+interface Props {
+  faqData: IFrequentlyAskData[];
+}
+
+const FaqAccordion = ({ faqData }: Props) => {
   return (
     <Accordion type="single" collapsible className="w-full">
-      {FAQ_DATA.map((faq) => (
+      {faqData.map((faq) => (
         <AccordionItem
           key={faq.question}
           value={faq.question}
@@ -29,6 +33,6 @@ export function FaqAccordion() {
       ))}
     </Accordion>
   );
-}
+};
 
 export default FaqAccordion;

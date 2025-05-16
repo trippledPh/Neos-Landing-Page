@@ -1,3 +1,4 @@
+import PrimaryBadge from "@/components/molecules/badge/primary-badge";
 import PrimaryButton from "@/components/molecules/button/primary-button";
 
 const CalloutSection = () => {
@@ -12,6 +13,9 @@ const CalloutSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <div className="flex flex-col items-center justify-center">
+        <PrimaryBadge label="Sign up for a Neos" className="mb-14" />
+      </div>
       <div className="flex flex-col gap-8 mb-14">
         <h3 className="text-[40px] leading-[48px] text-center space-x-4 font-maxima-nouva font-bold">
           Join Neos today!

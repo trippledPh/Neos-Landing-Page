@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import NAVIGATION_DATA from "@/data/navigation.data";
 import { toast } from "sonner";
+import useAppStore from "@/store/app.store";
+import PROTECTED_NAVIGATION_DATA from "@/data/protected.navigation.data";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isProtected } = useAppStore();
   const { isMobile, isSmallMobile } = useScreenBreakpoint();
 
   const handleOpen = () => {
@@ -47,16 +50,25 @@ const Header = () => {
           <Logo size={48} />
 
           <ul className="hidden md:flex md:items-center md:gap-4 text-lg text-muted-foreground lg:gap-12">
-            {NAVIGATION_DATA.map((item) => (
-              <li key={item.id}>
-                <button
-                  className="hover:text-primary hover:underline transition-all duration-200 cursor-pointer"
-                  onClick={() => handleNavigation(item.href)}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
+            {isProtected
+              ? PROTECTED_NAVIGATION_DATA.map((item) => (
+                  <Link
+                    to={item.href}
+                    key={item.id}
+                    className="hover:text-primary hover:underline transition-all duration-200 cursor-pointer underline-offset-4"
+                  >
+                    {item.label}
+                  </Link>
+                ))
+              : NAVIGATION_DATA.map((item) => (
+                  <Link
+                    to={item.href}
+                    key={item.id}
+                    className="hover:text-primary hover:underline transition-all duration-200 cursor-pointer underline-offset-4"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
           </ul>
 
           <span></span>
@@ -84,16 +96,27 @@ const Header = () => {
             </div>
 
             <ul className="text-2xl flex flex-col gap-4 justify-start items-start mt-8 text-muted-foreground">
-              {NAVIGATION_DATA.map((item) => (
-                <li key={item.label}>
-                  <button
-                    onClick={() => handleNavigation(item.href)}
-                    className="cursor-pointer"
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
+              {isProtected
+                ? PROTECTED_NAVIGATION_DATA.map((item) => (
+                    <li key={item.label}>
+                      <button
+                        onClick={() => handleNavigation(item.href)}
+                        className="cursor-pointer"
+                      >
+                        {item.label}
+                      </button>
+                    </li>
+                  ))
+                : NAVIGATION_DATA.map((item) => (
+                    <li key={item.label}>
+                      <button
+                        onClick={() => handleNavigation(item.href)}
+                        className="cursor-pointer"
+                      >
+                        {item.label}
+                      </button>
+                    </li>
+                  ))}
             </ul>
           </div>
         </div>
