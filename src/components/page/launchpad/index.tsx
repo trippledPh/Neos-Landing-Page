@@ -8,7 +8,7 @@ import { LAUNCHPAD_FAQ_DATA } from "@/data/launchpad-faq.data";
 
 const LaunchPadScreen = () => {
   return (
-    <div className="overflow-x-hidden mx-auto max-w-[1440px]">
+    <div className="overflow-visible mx-auto max-w-[1440px]">
       <div>
         <Header />
         <div

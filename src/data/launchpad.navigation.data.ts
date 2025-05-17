@@ -1,8 +1,8 @@
 const LAUNCHPAD_NAVIGATION_DATA = [
   {
     id: 1,
-    label: "About",
-    href: "/about",
+    label: "Home Page",
+    href: "/",
   },
   {
     id: 2,
@@ -17,7 +17,8 @@ const LAUNCHPAD_NAVIGATION_DATA = [
   {
     id: 4,
     label: "FAQs",
-    href: "/faqs",
+    href: "#faq",
+    as: "anchor",
   },
 ];
 

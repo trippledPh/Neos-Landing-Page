@@ -33,7 +33,7 @@ const NarrativeScreen = () => {
     paginationItemsToDisplay,
   });
   return (
-    <div>
+    <section className="overflow-visible mx-auto max-w-[1440px]">
       <Header />
       <div className="flex justify-between items-center p-4">
         <h2 className="text-xl font-semibold font-maxima-nouva">
@@ -209,7 +209,7 @@ const NarrativeScreen = () => {
           </PaginationContent>
         </Pagination>
       </div>
-    </div>
+    </section>
   );
 };
 

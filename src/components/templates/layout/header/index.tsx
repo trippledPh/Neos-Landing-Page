@@ -8,6 +8,7 @@ import NAVIGATION_DATA from "@/data/navigation.data";
 import { toast } from "sonner";
 import useAppStore from "@/store/app.store";
 import LAUNCHPAD_NAVIGATION_DATA from "@/data/launchpad.navigation.data";
+import PrimaryButton from "@/components/molecules/button/primary-button";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,13 +53,25 @@ const Header = () => {
           <ul className="hidden md:flex md:items-center md:gap-4 text-lg text-muted-foreground lg:gap-12">
             {pathname.includes("launchpad")
               ? LAUNCHPAD_NAVIGATION_DATA.map((item) => (
-                  <Link
-                    to={item.href}
-                    key={item.id}
-                    className="hover:text-primary hover:underline transition-all duration-200 cursor-pointer underline-offset-4"
-                  >
-                    {item.label}
-                  </Link>
+                  <>
+                    {item.as === "anchor" ? (
+                      <a
+                        href={item.href}
+                        key={item.id}
+                        className="hover:text-primary hover:underline transition-all duration-200 cursor-pointer underline-offset-4"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        key={item.id}
+                        className="hover:text-primary hover:underline transition-all duration-200 cursor-pointer underline-offset-4"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </>
                 ))
               : NAVIGATION_DATA.map((item) => (
                   <Link
@@ -79,9 +92,20 @@ const Header = () => {
             <Menu style={{ width: "32px", height: "32px" }} />
           </Button>
         ) : (
-          <Link to="/" className="">
-            <img src="/image/icons/x.svg" alt="x" />
-          </Link>
+          <>
+            {pathname.includes("launchpad") ? (
+              <Button
+                onClick={() => handleNavigation("/")}
+                className="bg-primary text-white"
+              >
+                Login
+              </Button>
+            ) : (
+              <Link to="/" className="">
+                <img src="/image/icons/x.svg" alt="x" />
+              </Link>
+            )}
+          </>
         )}
       </header>
 

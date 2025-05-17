@@ -26,7 +26,7 @@ const CalloutSection = () => {
         </p>
       </div>
       <div className="flex justify-center items-center mb-24">
-        <PrimaryButton>Coming Soon</PrimaryButton>
+        <PrimaryButton>Login to Start</PrimaryButton>
       </div>
     </section>
   );

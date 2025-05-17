@@ -1,8 +1,11 @@
-import GlowingPrimaryButton from "@/components/molecules/button/glowing-primary-button";
 import LaunchPadGlowingCard from "@/components/molecules/card/gloawing-card";
+import LoginTelegramModal from "@/components/molecules/modal/login-modal";
+import LoginPendingModal from "@/components/molecules/modal/login-pending-modal";
 import { LaunchPadArticleData } from "@/data/launchpad-article.data";
+import { useState } from "react";
 
 const LaunchPadHeroSection = () => {
+  const [isPending, setIsPending] = useState(false);
   return (
     <section className="w-full flex flex-col justify-center items-center p-4 gap-6 mt-[100px] p-4  xl:flex-row xl:gap-8 xl:items-start lg:justify-start">
       <div className="flex flex-col justify-center items-center  gap-[48px] mb-[48px] md:items-center xl:items-start md:justify-center ">
@@ -16,7 +19,8 @@ const LaunchPadHeroSection = () => {
           </p>
         </div>
 
-        <GlowingPrimaryButton>Launch Start</GlowingPrimaryButton>
+        <LoginTelegramModal onPending={setIsPending} />
+        <LoginPendingModal isOpen={isPending} onOpenChange={setIsPending} />
       </div>
 
       <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-8  ">
