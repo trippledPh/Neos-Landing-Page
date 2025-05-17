@@ -2,6 +2,7 @@ export interface IFrequentlyAskData {
   id: number;
   question: string;
   answer: string;
+  bulletPoints?: string[];
 }
 
 export const FAQ_DATA: IFrequentlyAskData[] = [

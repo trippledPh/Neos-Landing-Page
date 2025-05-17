@@ -28,6 +28,13 @@ const FaqAccordion = ({ faqData }: Props) => {
           </AccordionTrigger>
           <AccordionContent className="text-lg text-muted-foreground">
             {faq.answer}
+            {faq.bulletPoints && (
+              <ul className="list-disc pl-5">
+                {faq.bulletPoints.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            )}
           </AccordionContent>
         </AccordionItem>
       ))}
