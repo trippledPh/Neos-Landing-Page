@@ -5,6 +5,9 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { INavigationData } from "@/interface/static.interface";
+import { useAccount } from "wagmi";
+import ConnectWalletButton from "@/components/molecules/button/connect-wallet-button";
+import ConnectWalletModal from "@/components/molecules/modal/connect-wallet-modal";
 
 interface Props {
   routes: INavigationData[];
@@ -12,7 +15,9 @@ interface Props {
 
 const Header = ({ routes }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const { isMobile, isSmallMobile } = useScreenBreakpoint();
+  const { address, isConnected } = useAccount();
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -50,9 +55,19 @@ const Header = ({ routes }: Props) => {
             <Menu style={{ width: "32px", height: "32px" }} />
           </Button>
         ) : (
-          <Link to="/" className="">
-            <img src="/image/icons/x.svg" alt="x" />
-          </Link>
+          <div className="flex items-center justify-center gap-4">
+            <Link to="/" className="w-4 h-4">
+              <img src="/image/icons/x.svg" alt="x" className="w-full h-full" />
+            </Link>
+
+            {address ? (
+              <Button variant="outline" size="sm">
+                {address.slice(0, 6)}...{address.slice(-4)}
+              </Button>
+            ) : (
+              <ConnectWalletModal />
+            )}
+          </div>
         )}
       </header>
 

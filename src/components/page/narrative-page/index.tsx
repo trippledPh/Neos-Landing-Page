@@ -13,14 +13,12 @@ import {
   PaginationLink,
 } from "@/components/ui/pagination";
 import Header from "@/components/templates/layout/header";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { usePagination } from "@/hooks/use-pagination";
-import { ArrowUp, Filter, SortAsc } from "lucide-react";
 import { useState } from "react";
 import NarrativeCard from "@/components/molecules/card/narrative-card";
 import LaunchPadFilterModal from "@/components/molecules/modal/launchpad-filter-modal";
 import LaunchPadSortModal from "@/components/molecules/modal/launchpad-sort-modal";
+import LAUNCHPAD_NAVIGATION_DATA from "@/data/launchpad/launchpad.navigation.data";
 
 const NarrativeScreen = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,7 +32,7 @@ const NarrativeScreen = () => {
   });
   return (
     <section className="overflow-visible mx-auto max-w-[1440px]">
-      <Header />
+      <Header routes={LAUNCHPAD_NAVIGATION_DATA} />
       <div className="flex justify-between items-center p-4">
         <h2 className="text-xl font-semibold font-maxima-nouva">
           Trending Narratives
