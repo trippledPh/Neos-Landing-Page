@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import IndicatorBadge from "@/components/ui/indicator-bard";
 import { cn } from "@/lib/utils";
-import { IRoadMapData } from "@/data/roadmap.data";
+import { IRoadMapData } from "@/data/landingpage/landingpage-roadmap.data";
 
 interface Props extends IRoadMapData {
   className?: string;

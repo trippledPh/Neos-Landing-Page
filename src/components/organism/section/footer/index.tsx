@@ -1,8 +1,8 @@
 import {
   FOOTER_DATA_LEFT_SIDE,
   FOOTER_DATA_RIGHT_SIDE,
-} from "@/data/footer.data";
-import { SOCIALS_DATA } from "@/data/socials.data";
+} from "@/data/others/footer.data";
+import { SOCIALS_DATA } from "@/data/landingpage/ladingpage-socials.data";
 import { Link } from "react-router-dom";
 
 const FooterSection = () => {

@@ -1,4 +1,6 @@
-const NAVIGATION_DATA = [
+import { INavigationData } from "@/interface/static.interface";
+
+const NAVIGATION_DATA: INavigationData[] = [
   {
     id: 1,
     label: "Features",

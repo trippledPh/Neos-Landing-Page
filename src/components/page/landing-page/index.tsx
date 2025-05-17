@@ -9,12 +9,13 @@ import RoadMapSection from "../../organism/section/roadmap-section";
 import SponsorSection from "../../organism/section/sponsor-section";
 import TokenomicsSection from "../../organism/section/tokenomics-section";
 import LaunchpadSection from "@/components/organism/section/launchpad-section";
-import { FAQ_DATA } from "@/data/faq.data";
+import { FAQ_DATA } from "@/data/landingpage/landingpage-faq.data";
+import NAVIGATION_DATA from "@/data/landingpage/landingpage-navigation.data";
 
 const LandingPage = () => {
   return (
     <div className="overflow-x-hidden mx-auto max-w-[1440px]">
-      <Header />
+      <Header routes={NAVIGATION_DATA} />
       <div
         className="relative min-h-[calc(100vh-82px)]  flex justify-center items-center flex-col gap-8 mb-[80px]"
         style={{

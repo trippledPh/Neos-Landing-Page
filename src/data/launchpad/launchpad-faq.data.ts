@@ -1,4 +1,4 @@
-import { IFrequentlyAskData } from "./faq.data";
+import { IFrequentlyAskData } from "@/interface/static.interface";
 
 export const LAUNCHPAD_FAQ_DATA: IFrequentlyAskData[] = [
   {

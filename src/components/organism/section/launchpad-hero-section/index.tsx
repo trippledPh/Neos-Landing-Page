@@ -1,7 +1,7 @@
 import LaunchPadGlowingCard from "@/components/molecules/card/gloawing-card";
 import LoginTelegramModal from "@/components/molecules/modal/login-modal";
 import LoginPendingModal from "@/components/molecules/modal/login-pending-modal";
-import { LaunchPadArticleData } from "@/data/launchpad-article.data";
+import { LaunchPadArticleData } from "@/data/launchpad/launchpad-article.data";
 import { useState } from "react";
 
 const LaunchPadHeroSection = () => {

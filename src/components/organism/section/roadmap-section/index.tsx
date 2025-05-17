@@ -3,7 +3,7 @@ import RoadMapCard from "@/components/molecules/card/road-map-card";
 import CurveDownDottedLine from "@/components/molecules/lines/curve-down-dotted";
 import StraightDownDottedLine from "@/components/molecules/lines/straight-down-dotted";
 import Logo from "@/components/ui/logo";
-import { ROADMAP_DATA } from "@/data/roadmap.data";
+import { ROADMAP_DATA } from "@/data/landingpage/landingpage-roadmap.data";
 import useScreenBreakpoint from "@/hook/use-screen-breakpoint";
 import { cn } from "@/lib/utils";
 

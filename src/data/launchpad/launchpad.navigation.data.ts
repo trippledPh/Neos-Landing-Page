@@ -1,4 +1,6 @@
-const LAUNCHPAD_NAVIGATION_DATA = [
+import { INavigationData } from "@/interface/static.interface";
+
+const LAUNCHPAD_NAVIGATION_DATA: INavigationData[] = [
   {
     id: 1,
     label: "Home Page",

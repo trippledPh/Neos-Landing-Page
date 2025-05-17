@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ILaunchPadArticleData } from "@/data/launchpad-article.data";
+import { ILaunchPadArticleData } from "@/data/launchpad/launchpad-article.data";
 
 interface Props extends Omit<ILaunchPadArticleData, "id"> {
   className?: string;

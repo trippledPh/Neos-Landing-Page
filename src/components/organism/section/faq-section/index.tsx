@@ -1,7 +1,7 @@
 import FaqAccordion from "@/components/molecules/accordion/faq-accordion";
 import PrimaryBadge from "@/components/molecules/badge/primary-badge";
 import { Button } from "@/components/ui/button";
-import { IFrequentlyAskData } from "@/data/faq.data";
+import { IFrequentlyAskData } from "@/data/landingpage/landingpage-faq.data";
 
 interface Props {
   faqData: IFrequentlyAskData[];

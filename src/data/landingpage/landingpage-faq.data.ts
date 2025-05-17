@@ -1,9 +1,4 @@
-export interface IFrequentlyAskData {
-  id: number;
-  question: string;
-  answer: string;
-  bulletPoints?: string[];
-}
+import { IFrequentlyAskData } from "@/interface/static.interface";
 
 export const FAQ_DATA: IFrequentlyAskData[] = [
   {
