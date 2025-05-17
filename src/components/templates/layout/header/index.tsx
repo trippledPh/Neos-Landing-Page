@@ -2,17 +2,18 @@ import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo";
 import useScreenBreakpoint from "@/hook/use-screen-breakpoint";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import NAVIGATION_DATA from "@/data/navigation.data";
 import { toast } from "sonner";
 import useAppStore from "@/store/app.store";
-import PROTECTED_NAVIGATION_DATA from "@/data/protected.navigation.data";
+import LAUNCHPAD_NAVIGATION_DATA from "@/data/launchpad.navigation.data";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isProtected } = useAppStore();
   const { isMobile, isSmallMobile } = useScreenBreakpoint();
+  const { pathname } = useLocation();
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -39,7 +40,6 @@ const Header = () => {
       return;
     }
 
-    console.log(href);
     window.location.href = href;
   };
 
@@ -50,8 +50,8 @@ const Header = () => {
           <Logo size={48} />
 
           <ul className="hidden md:flex md:items-center md:gap-4 text-lg text-muted-foreground lg:gap-12">
-            {isProtected
-              ? PROTECTED_NAVIGATION_DATA.map((item) => (
+            {pathname.includes("launchpad")
+              ? LAUNCHPAD_NAVIGATION_DATA.map((item) => (
                   <Link
                     to={item.href}
                     key={item.id}
@@ -97,7 +97,7 @@ const Header = () => {
 
             <ul className="text-2xl flex flex-col gap-4 justify-start items-start mt-8 text-muted-foreground">
               {isProtected
-                ? PROTECTED_NAVIGATION_DATA.map((item) => (
+                ? LAUNCHPAD_NAVIGATION_DATA.map((item) => (
                     <li key={item.label}>
                       <button
                         onClick={() => handleNavigation(item.href)}

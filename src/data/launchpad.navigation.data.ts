@@ -1,4 +1,4 @@
-const PROTECTED_NAVIGATION_DATA = [
+const LAUNCHPAD_NAVIGATION_DATA = [
   {
     id: 1,
     label: "About",
@@ -7,7 +7,7 @@ const PROTECTED_NAVIGATION_DATA = [
   {
     id: 2,
     label: "Live Narratives",
-    href: "/live-narratives",
+    href: "/launchpad/narratives",
   },
   {
     id: 3,
@@ -21,4 +21,4 @@ const PROTECTED_NAVIGATION_DATA = [
   },
 ];
 
-export default PROTECTED_NAVIGATION_DATA;
+export default LAUNCHPAD_NAVIGATION_DATA;
