@@ -8,6 +8,7 @@ import { INavigationData } from "@/interface/static.interface";
 import { useAccount } from "wagmi";
 import ConnectWalletButton from "@/components/molecules/button/connect-wallet-button";
 import ConnectWalletModal from "@/components/molecules/modal/connect-wallet-modal";
+import ProfileMenu from "@/components/organism/profile/profile-menu";
 
 interface Props {
   routes: INavigationData[];
@@ -60,13 +61,7 @@ const Header = ({ routes }: Props) => {
               <img src="/image/icons/x.svg" alt="x" className="w-full h-full" />
             </Link>
 
-            {address ? (
-              <Button variant="outline" size="sm">
-                {address.slice(0, 6)}...{address.slice(-4)}
-              </Button>
-            ) : (
-              <ConnectWalletModal />
-            )}
+            {address ? <ProfileMenu /> : <ConnectWalletModal />}
           </div>
         )}
       </header>

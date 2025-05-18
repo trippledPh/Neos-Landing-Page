@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,12 +7,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
 import { useConnect } from "wagmi";
+import ConnectWalletButton from "../../button/connect-wallet-button";
+
 const ConnectWalletModal = () => {
   const { connectors, connect } = useConnect();
 
-  console.log(connectors);
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -37,24 +37,11 @@ const ConnectWalletModal = () => {
 
         <div className="flex flex-col gap-4">
           {connectors.map((connector) => (
-            <button
+            <ConnectWalletButton
               key={connector.uid}
+              connector={connector}
               onClick={() => connect({ connector })}
-              className={cn(
-                "bg-muted-foreground/10 rounded-lg px-4 py-2 flex justify-between items-center",
-                "hover:bg-muted-foreground/20"
-              )}
-            >
-              <span className="text-lg font-medium">{connector.name}</span>
-
-              <div className="flex justify-center items-center w-10 h-10 overflow-hidden rounded-md   ">
-                <img
-                  src={connector.icon}
-                  alt={connector.name}
-                  className="w-full h-full"
-                />
-              </div>
-            </button>
+            />
           ))}
         </div>
 
