@@ -7,11 +7,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import { Filter, SortAsc } from "lucide-react";
 import ComboBoxField from "../../form/combo-box-field";
+import { SortAsc } from "lucide-react";
 
 const LaunchPadSortModal = () => {
   return (

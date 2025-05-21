@@ -14,16 +14,15 @@ import {
 } from "@/components/ui/pagination";
 import Header from "@/components/templates/layout/header";
 import { usePagination } from "@/hooks/use-pagination";
-import { useState } from "react";
 import NarrativeCard from "@/components/molecules/card/narrative-card";
 import LaunchPadFilterModal from "@/components/molecules/modal/launchpad-filter-modal";
 import LaunchPadSortModal from "@/components/molecules/modal/launchpad-sort-modal";
 import LAUNCHPAD_NAVIGATION_DATA from "@/data/launchpad/launchpad.navigation.data";
 
 const NarrativeScreen = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(10);
-  const [paginationItemsToDisplay, setPaginationItemsToDisplay] = useState(5);
+  let currentPage = 1;
+  let totalPages = 10;
+  let paginationItemsToDisplay = 5;
 
   const { pages, showLeftEllipsis, showRightEllipsis } = usePagination({
     currentPage,

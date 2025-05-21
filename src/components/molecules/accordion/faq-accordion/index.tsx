@@ -4,10 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  FAQ_DATA,
-  IFrequentlyAskData,
-} from "@/data/landingpage/landingpage-faq.data";
+import { IFrequentlyAskData } from "@/interface/static.interface";
 
 interface Props {
   faqData: IFrequentlyAskData[];
