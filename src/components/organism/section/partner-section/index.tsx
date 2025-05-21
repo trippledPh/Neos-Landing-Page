@@ -15,9 +15,10 @@ const PartnerSection = () => {
             Trusted by our partners
           </h2>
 
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-6 mb-8">
             <img src="/image/icons/aventa.logo.png" alt="aventa" />
             <img src="/image/icons/qlix.logo.png" alt="qlix" />
+            <img src="/image/icons/secro-ai.logo.png" alt="secro-ai" />
           </div>
         </div>
       </div>
