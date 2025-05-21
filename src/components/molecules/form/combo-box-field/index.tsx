@@ -23,7 +23,7 @@ import { IComboBoxField } from "./interface";
 
 interface Props extends IComboBoxField {}
 
-const ComboBoxField = ({ label, placeholder, options, ...props }: Props) => {
+const ComboBoxField = ({ label, placeholder, options }: Props) => {
   const id = useId();
   const [open, setOpen] = useState<boolean>(false);
   const [value, setValue] = useState<string>("");

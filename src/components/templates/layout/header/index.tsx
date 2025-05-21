@@ -6,9 +6,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { INavigationData } from "@/interface/static.interface";
 import { useAccount } from "wagmi";
-import ConnectWalletButton from "@/components/molecules/button/connect-wallet-button";
-import ConnectWalletModal from "@/components/molecules/modal/connect-wallet-modal";
 import ProfileMenu from "@/components/organism/profile/profile-menu";
+import ConnectWalletModal from "@/components/molecules/modal/connect-wallet-modal";
 
 interface Props {
   routes: INavigationData[];
@@ -18,7 +17,7 @@ const Header = ({ routes }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { isMobile, isSmallMobile } = useScreenBreakpoint();
-  const { address, isConnected } = useAccount();
+  const { address } = useAccount();
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
