@@ -1,4 +1,5 @@
-import PrimaryButton from "@/components/molecules/button/primary-button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const HeroSection = () => {
   return (
@@ -14,7 +15,18 @@ const HeroSection = () => {
         AI-powered bot that analyzes tweets from top crypto influencers in
         real-time to identify emerging trends and narratives.
       </p>
-      <PrimaryButton>Coming Soon</PrimaryButton>
+      <div
+        className={cn(
+          buttonVariants({ variant: "outline" }),
+          "text-white text-xl",
+          "border-primary-500 border-[#fc7200]"
+        )}
+      >
+        <h3 className="text-white text-xl">
+          0xfDaBB49f5e2F686cb5B623859E92C72a11aF5f94
+        </h3>
+      </div>
+      {/* <PrimaryButton>Coming Soon</PrimaryButton> */}
     </section>
   );
 };

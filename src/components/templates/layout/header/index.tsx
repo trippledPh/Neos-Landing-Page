@@ -7,7 +7,6 @@ import { useState } from "react";
 import { INavigationData } from "@/interface/static.interface";
 import { useAccount } from "wagmi";
 import ProfileMenu from "@/components/organism/profile/profile-menu";
-import ConnectWalletModal from "@/components/molecules/modal/connect-wallet-modal";
 
 interface Props {
   routes: INavigationData[];
@@ -60,7 +59,7 @@ const Header = ({ routes }: Props) => {
               <img src="/image/icons/x.svg" alt="x" className="w-full h-full" />
             </Link>
 
-            {address ? <ProfileMenu /> : <ConnectWalletModal />}
+            {address ? <ProfileMenu /> : <></>}
           </div>
         )}
       </header>
