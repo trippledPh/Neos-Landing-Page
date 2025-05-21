@@ -27,7 +27,7 @@ const NAVIGATION_DATA: INavigationData[] = [
   {
     id: 5,
     label: "Launchpad",
-    href: "/launchpad",
+    href: "#launchpad",
   },
 ];
 

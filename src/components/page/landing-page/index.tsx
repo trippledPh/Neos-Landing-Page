@@ -11,6 +11,7 @@ import TokenomicsSection from "../../organism/section/tokenomics-section";
 import LaunchpadSection from "@/components/organism/section/launchpad-section";
 import { FAQ_DATA } from "@/data/landingpage/landingpage-faq.data";
 import NAVIGATION_DATA from "@/data/landingpage/landingpage-navigation.data";
+import PartnerSection from "@/components/organism/section/partner-section";
 
 const LandingPage = () => {
   return (
@@ -30,6 +31,7 @@ const LandingPage = () => {
       </div>
       <ArticleSection />
       <FeatureSection />
+      <PartnerSection />
       <TokenomicsSection />
       <RoadMapSection />
       <LaunchpadSection />
