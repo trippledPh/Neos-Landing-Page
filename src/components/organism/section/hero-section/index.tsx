@@ -1,3 +1,4 @@
+import PrimaryButton from "@/components/molecules/button/primary-button";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -22,11 +23,12 @@ const HeroSection = () => {
           "border-primary-500 border-[#fc7200]"
         )}
       >
-        <h3 className="text-white text-xl">
+        <PrimaryButton>Coming Soon</PrimaryButton>
+
+        <h3 className="text-white text-lg">
           0xfDaBB49f5e2F686cb5B623859E92C72a11aF5f94
         </h3>
       </div>
-      {/* <PrimaryButton>Coming Soon</PrimaryButton> */}
     </section>
   );
 };

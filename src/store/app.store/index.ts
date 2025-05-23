@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { IAppStore } from "./interface";
 
 const useAppStore = create<IAppStore>((set) => ({
-  isProtected: false,
+  isProtected: true,
   setIsProtected: (isProtected: boolean) => set({ isProtected }),
 }));
 

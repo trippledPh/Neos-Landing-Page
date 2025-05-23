@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -8,20 +7,23 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import GlowingPrimaryButton from "../../button/glowing-primary-button";
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 interface Props {
-  onPending: (open: boolean) => void;
+  isOpen: boolean;
+  onOpenChange: (isOpen: boolean) => void;
+  onLogin: (user: any) => void;
+  isPending: boolean;
 }
 
-const LoginTelegramModal = ({ onPending }: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handlePending = () => {
-    onPending(true);
-    setIsOpen(false);
-  };
+const LoginTelegramModal = ({
+  isOpen,
+  onOpenChange,
+  onLogin,
+  isPending,
+}: Props) => {
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
         <GlowingPrimaryButton>Login to Start</GlowingPrimaryButton>
       </DialogTrigger>
@@ -42,15 +44,23 @@ const LoginTelegramModal = ({ onPending }: Props) => {
           </p>
         </DialogHeader>
 
-        <DialogFooter className="flex justify-center items-center">
-          <Button
-            size="lg"
-            variant="outline"
-            className=" bg-[#26A3E2] text-white cursor-pointer w-full"
-            onClick={handlePending}
-          >
-            Continue with Telegram
-          </Button>
+        <DialogFooter className="flex justify-center items-center ">
+          <div className="flex justify-center items-center w-full">
+            {/* <TelegramButton
+              bot="altdev_bot"
+              size="large"
+              dataOnauth={handleAuth}
+            /> */}
+            <Button
+              size="lg"
+              variant="outline"
+              className=" bg-[#26A3E2] text-white cursor-pointer w-full"
+              disabled={isPending}
+              onClick={() => onLogin(true)}
+            >
+              Continue with Telegram
+            </Button>
+          </div>
         </DialogFooter>
       </DialogContent>
     </Dialog>

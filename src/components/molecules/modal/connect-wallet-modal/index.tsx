@@ -10,13 +10,19 @@ import {
 import { useConnect } from "wagmi";
 import ConnectWalletButton from "../../button/connect-wallet-button";
 
-const ConnectWalletModal = () => {
+interface Props {
+  isOpen?: boolean;
+  onOpenChange?: (isOpen: boolean) => void;
+  isOveride?: boolean;
+}
+
+const ConnectWalletModal = ({ isOpen, onOpenChange, isOveride }: Props) => {
   const { connectors, connect } = useConnect();
 
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
-        <Button>Connect Wallet</Button>
+        {!isOveride && <Button>Connect Wallet</Button>}
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader className="flex flex-col gap-2 justify-center items-center mt-8">

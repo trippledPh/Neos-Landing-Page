@@ -9,7 +9,7 @@ import LAUNCHPAD_NAVIGATION_DATA from "@/data/launchpad/launchpad.navigation.dat
 
 const LaunchPadScreen = () => {
   return (
-    <div className="overflow-visible mx-auto max-w-[1440px]">
+    <section className="overflow-visible mx-auto max-w-[1440px]">
       <div>
         <Header routes={LAUNCHPAD_NAVIGATION_DATA} />
         <div
@@ -27,7 +27,7 @@ const LaunchPadScreen = () => {
         <CalloutSection />
         <FooterSection />
       </div>
-    </div>
+    </section>
   );
 };
 

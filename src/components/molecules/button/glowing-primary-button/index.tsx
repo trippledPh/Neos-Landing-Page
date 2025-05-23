@@ -18,7 +18,7 @@ const GlowingPrimaryButton = ({
     <div className="relative inline-block ">
       <Button
         className={cn(
-          "w-fit text-xl py-6 px-6 text-white relative",
+          "w-fit text-lg py-6 px-6 text-white relative",
           "before:absolute before:inset-0 before:bg-primary/50 before:blur-xl before:rounded-full before:-z-10",
           "after:absolute after:inset-0 after:bg-primary/30 after:blur-2xl after:rounded-full after:-z-10",
           "hover:before:bg-primary/70 hover:after:bg-primary/50 transition-all duration-300",
